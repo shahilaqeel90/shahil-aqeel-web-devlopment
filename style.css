@@ -1,0 +1,58 @@
+/* Basic reset and styling for visibility */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.item {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+/* The Grid Container */
+.grid-container {
+    display: grid; /* Enables the grid context */
+    
+    /* Defines 3 columns with equal width (1fr) */
+    grid-template-columns: 1fr 1fr 1fr; 
+    
+    /* Defines 2 rows: auto height for the first, 200px for the second */
+    grid-template-rows: auto 200px; 
+    
+    /* Adds space between grid items */
+    gap: 10px; 
+
+    /* Defines areas for easier placement */
+    grid-template-areas: 
+        "header header header"
+        "main sidebar footer";
+}
+
+/* Placing items using grid-area names */
+.item-1 {
+    grid-area: header;
+    background-color: #e6b0aa;
+}
+
+.item-2 {
+    grid-area: main;
+    background-color: #a9CCE3;
+}
+
+.item-3 {
+    grid-area: sidebar;
+    background-color: #A3D8A3;
+}
+
+.item-4 {
+    grid-area: footer;
+    background-color: #F7DC6F;
+}
